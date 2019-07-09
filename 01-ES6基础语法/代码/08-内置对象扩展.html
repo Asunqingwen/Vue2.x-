@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08-内置对象扩展</title>
+    <style>
+        .test{
+            width:100px;
+            height:100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+    <li>1111</li>
+</ul>
+    <script>
+        //1.模板字符串
+        // let html = '<html><head></head><body><p>今天天气很好！</p><div>适合敲代码</div></body></html>'
+/*        let str = '适合敲代码';
+        let classname = 'test';
+        let html = `<html>
+                        <head></head>
+                        <body>
+                            <p>今天天气很好！</p>
+                            <div class="${classname}">${str}</div>
+                        </body>
+                    </html>`;
+
+        console.log(html);*/
+
+        //2.数组的扩展
+        // array.from
+/*        let allLis = document.querySelectorAll('li');
+        console.log(allLis);
+        console.log(Array.isArray(allLis));
+
+        console.log(Array.from(allLis));*/
+        // array.of
+        // console.log(Array.of(1, 2, 3, 4));
+
+        //3.对象的扩展
+        //key 和value是一样的，写一个就够了
+/*        let name = 'zhangsna';
+        let age = '18'
+        let obj = {
+            name,
+            age
+        }
+        console.log(obj);*/
+
+        //Object.assign()
+        // let obj1 = {name:'zhangsna'}
+        // let obj2 = {age:'18'}
+        // let obj3 = {sex:'male'}
+        // let obj4 = {friends:'lisi'}
+        // let obj = {};
+        // Object.assign(obj,obj1,obj2,obj3,obj4);
+        // console.log(obj);
+
+        //延展操作符
+        let name = '今天天气很好';
+        let strArr = [...name];
+        console.log(strArr);
+
+        let student = {
+            name:'zhangsan',
+            age:18,
+            sex:'male'
+        }
+        // <Person {...student}/>
+
+        //面试
+        let myArr = [1,2,10,'zhangsa',20,2,1];
+        new Set(myArr);
+        console.log(myArr);
+        console.log([...new Set(myArr)]);
+    </script>
+</body>
+</html>

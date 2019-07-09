@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-数据集合-map</title>
+</head>
+<body>
+<script>
+    // let obj1 = {a:1},obj2={b:2},obj={}
+    // obj.name = 'zhangsna';
+    // obj[obj1] = 'tiankong';
+    // obj[obj2] = 'dahai';
+    // console.log(obj);
+    //
+    // console.log(obj1.toString());
+    // console.log(obj2.toString());
+    // console.log(obj1.toString() == obj2.toString());
+
+    //1. 创建一个map
+    let obj1 = {a:1},obj2={b:2}
+    const map = new Map([
+        ['name','zhangsan'],
+        ['age',18],
+        ['sex','男'],
+        [obj1,'几天了'],
+        [obj2,'三天了'],
+        ['name','zhangsi']
+        ]
+    )
+    console.log(map);
+
+    console.log(map.size);
+
+    // set和get
+/*    map.set('address','lodon').set('pet','dog');
+    console.log(map);
+    console.log(map.get('address'));*/
+
+    //delete
+    // map.delete(obj1);
+    // console.log(map);
+
+    //has
+    // console.log(map.has(obj1));
+    // console.log(map.has(obj2));
+
+    //clear
+    // map.clear();
+    // console.log(map);
+
+    //keys() values() entries()
+    console.log(map.keys());
+    console.log(map.values());
+    console.log(map.entries());
+
+    //遍历
+/*    map.forEach(function (value, index) {
+        console.log(value);
+        console.log(index);
+    })*/
+
+    //注意事项,两个不同的空对象
+    map.set({},'jkllk');
+    map.set({},'kljlkj');
+
+    console.log(map);
+</script>
+</body>
+</html>

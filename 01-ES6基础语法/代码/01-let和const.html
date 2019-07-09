@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-let和const</title>
+</head>
+<body>
+    <!--button{按钮$}*5  加上tab键，快速创建5个button标签-->
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+<script type="text/html">
+    // let 和 const 声明 变量和常量 var
+
+    //01-作用域只局限于当前代码块
+    /*{
+        var str = 'zhangsan';
+        console.log(str);
+
+        let str1 = 'lisi';
+        console.log(str1);
+    }
+    console.log('++++++' + str);
+    console.log('-----'+str1);*/
+
+    //02-使用let申明的变量作用域不会被提升
+    // {
+    //     console.log(str1);  //undefined
+    //     var str1 = 'zhangsan';
+    //
+    //     var str1;
+    //     console.log(str1);
+    //     str1 = 'zhangsna';
+    // }
+    //
+    // {
+    //     console.log(str);
+    //     let str = 'lisi';
+    // }
+
+    //03-在相同的作用域下不能申明相同的变量
+    // {
+    //     var str1 = 'zhangsna';
+    //     var str1 = 'lisi';
+    //
+    //     console.log(str1);
+    //
+    //     // let str2 = 'wangwu';
+    //     // let str2 = 'zhaoliu';
+    //     // console.log(str2);
+    // }
+
+    //04-for循环体现let的父子作用域
+    // var btns = document.querySelectorAll('button');
+    // for(var i = 0;i < btns.length;i++){
+    //     btns[i].onclick = function () {
+    //         alert('点击了第' + i + '个按钮');
+    //     }
+    // }
+    // var btns = document.querySelectorAll('button');
+    // for(var i = 0;i < btns.length;i++){
+    //     (function (i) {        //闭包
+    //         btns[i].onclick = function () {
+    //             alert('点击了第' + i + '个按钮');
+    //         }
+    //     })(i);
+    // }
+    // let btns = document.querySelectorAll('button');
+    // for(let i = 0;i < btns.length;i++){
+    //     btns[i].onclick = function () {         //不需要闭包
+    //         alert('点击了第' + i + '个按钮');
+    //     }
+    // }
+
+    for(let i=0;i<5;i++){
+        let i = 20;
+        console.log(i);
+    }
+</script>
+
+<script>
+    //01 只在当前的代码块中有效
+    // {
+    //     const a = 'zhangsna';
+    //     const a = 'lisi';
+    //     console.log(a);
+    // }
+    // console.log(a);
+
+    //02-作用域不会被提升
+
+    //03-不能重复声明
+
+    //04-声明的常量必须赋值
+    // {
+    //     let name;
+    //     name = 'zhangsna';
+    //
+    //     console.log(name);
+    //
+    //     const name1;
+    //
+    //     const name2 = 'zhagnsna';
+    //     name2 = 'lisi';
+    // }
+
+    {
+        const obj = {name:'zhangsna'};
+        console.log(obj);
+
+        obj.name = 'lisi';
+        console.log(obj);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-数据集合-set</title>
+</head>
+<body>
+
+<script>
+    //1. 创建一个集合
+    let arr = [];
+    let ogj = {}
+    let set = new Set(['zhangsan','lisi','wangwu','zhangsan']);
+    console.log(set);
+
+    //02. 一个属性
+    // console.log(set.size);
+
+    //03.四个方法
+    //add
+    // set.add('liudehua').add('sqw');
+    // console.log(set);
+
+    //delete
+    set.delete('liudehua');
+
+    //has
+    // console.log(set.has('zhangsan'));
+
+    //clear
+    // set.clear();
+    // console.log(set);
+
+    // keys values
+    console.log(set.keys());
+    // console.log(set.values());
+</script>
+
+</body>
+</html>
