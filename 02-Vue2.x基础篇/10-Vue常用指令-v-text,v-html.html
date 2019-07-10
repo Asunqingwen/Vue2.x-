@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-Vue常用指令v-text,v-html </title>
+</head>
+<body>
+<div id="app">
+    <p>{{msg}}hahhahah</p>
+    <p v-text="msg">jlklk;j;</p>
+    <div v-html="html">
+        hakljlkjlk
+    </div>
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data:{
+            msg:'nihao',
+            html:'<input type="date"><input type="color">',
+        }
+    })
+</script>
+</body>
+</html>
