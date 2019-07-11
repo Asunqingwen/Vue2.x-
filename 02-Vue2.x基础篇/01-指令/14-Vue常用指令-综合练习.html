@@ -69,20 +69,20 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="p in persons">
+        <tr v-for="(p,index) in persons">
             <td>{{p.name}}</td>
             <td>{{p.sex}}</td>
             <td>{{p.age}}</td>
             <td>{{p.phone}}</td>
             <td>
-                <button>删除</button>
+                <button @click="deleteStudentMsg(index)">删除</button>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
 
-<script src="js/vue.js"></script>
+<script src="../02-计算属性/js/vue.js"></script>
 <script>
     new Vue({
         el:"#app",
@@ -123,6 +123,10 @@
                 this.persons.unshift(this.newStudent);
                 //清空数据
                 this.newStudent = {name:'',age:0,sex:'男',phone:''};
+            },
+            //删除一条学生记录
+            deleteStudentMsg(index){
+                this.persons.splice(index,1);
             }
         }
     })
